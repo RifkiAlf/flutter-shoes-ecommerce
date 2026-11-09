@@ -37,7 +37,7 @@ class _AddCardScreenState extends State<AddCardScreen> {
         title: Text(
           "Add Card",
           style: TextStyle(
-            fontFamily: 'Jost',
+            fontFamily: 'Poppins',
             color: isDark ? Colors.white : Colors.black,
             fontWeight: FontWeight.w500,
           ),
@@ -206,7 +206,7 @@ class _AddCardScreenState extends State<AddCardScreen> {
       child: Text(
         label,
         style: TextStyle(
-          fontFamily: 'Jost',
+          fontFamily: 'Poppins',
           fontWeight: FontWeight.w500,
           fontSize: 14,
           color: isDark ? Colors.white : Colors.black,
@@ -228,7 +228,7 @@ class _AddCardScreenState extends State<AddCardScreen> {
       keyboardType: isNumber ? TextInputType.number : TextInputType.text,
       obscureText: isObscure,
       style: TextStyle(
-        fontFamily: 'Jost',
+        fontFamily: 'Poppins',
         fontSize: 15,
         color: isDark ? Colors.white : Colors.black,
       ),
@@ -286,7 +286,7 @@ class _AddCardScreenState extends State<AddCardScreen> {
           child: Text(
             "Add Card",
             style: TextStyle(
-              fontFamily: 'Jost',
+              fontFamily: 'Poppins',
               color: isDark ? Colors.black : Colors.white,
               fontSize: 16,
               fontWeight: FontWeight.w600,

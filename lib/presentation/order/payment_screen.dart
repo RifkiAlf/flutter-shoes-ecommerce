@@ -30,7 +30,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
         title: Text(
           "Payment",
           style: TextStyle(
-            fontFamily: 'Jost',
+            fontFamily: 'Poppins',
             color: isDark ? Colors.white : Colors.black,
             fontWeight: FontWeight.w500,
           ),
@@ -131,7 +131,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                       child: Text(
                         title,
                         style: TextStyle(
-                          fontFamily: 'Jost',
+                          fontFamily: 'Poppins',
                           fontWeight: FontWeight.w500,
                           fontSize: 15,
                           color: isDark ? Colors.white : Colors.black,
@@ -204,7 +204,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
           "Carry on your cash payment..\nThanx!",
           textAlign: TextAlign.left,
           style: const TextStyle(
-            fontFamily: 'Jost',
+            fontFamily: 'Poppins',
             color: Colors.grey,
             fontSize: 13,
             height: 1.5,
@@ -223,7 +223,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
         Text(
           "Link via UPI",
           style: TextStyle(
-            fontFamily: 'Jost',
+            fontFamily: 'Poppins',
             fontWeight: FontWeight.w600,
             fontSize: 14,
             color: isDark ? Colors.white : Colors.black,
@@ -240,7 +240,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
               child: Text(
                 "Your UPI ID Will be encrypted and is 100% safe with us.",
                 style: TextStyle(
-                  fontFamily: 'Jost',
+                  fontFamily: 'Poppins',
                   color: Colors.grey,
                   fontSize: 12,
                 ),
@@ -261,7 +261,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
         Text(
           "Link Your Wallet",
           style: TextStyle(
-            fontFamily: 'Jost',
+            fontFamily: 'Poppins',
             fontWeight: FontWeight.w600,
             fontSize: 14,
             color: isDark ? Colors.white : Colors.black,
@@ -291,7 +291,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
         title: Text(
           "Netbanking",
           style: TextStyle(
-            fontFamily: 'Jost',
+            fontFamily: 'Poppins',
             fontWeight: FontWeight.bold,
             color: isDark ? Colors.white : Colors.black,
           ),
@@ -300,7 +300,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
           "Carry on your payment by select your bank",
           textAlign: TextAlign.left,
           style: TextStyle(
-            fontFamily: 'Jost',
+            fontFamily: 'Poppins',
             fontSize: 12,
             color: isDark ? Colors.white70 : Colors.black54,
           ),
@@ -324,7 +324,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
             Text(
               "Credit/Debit Card",
               style: TextStyle(
-                fontFamily: 'Jost',
+                fontFamily: 'Poppins',
                 fontWeight: FontWeight.w600,
                 fontSize: 16,
                 color: isDark ? Colors.white : Colors.black,
@@ -355,7 +355,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                     Text(
                       "Add Card",
                       style: TextStyle(
-                        fontFamily: 'Jost',
+                        fontFamily: 'Poppins',
                         color: isDark ? Colors.white : Colors.black,
                         fontWeight: FontWeight.w500,
                       ),
@@ -537,13 +537,13 @@ class _PaymentScreenState extends State<PaymentScreen> {
       padding: const EdgeInsets.symmetric(vertical: 12),
       child: TextField(
         style: TextStyle(
-          fontFamily: 'Jost',
+          fontFamily: 'Poppins',
           color: isDark ? Colors.white : Colors.black,
         ),
         decoration: InputDecoration(
           hintText: hint,
           hintStyle: const TextStyle(
-            fontFamily: 'Jost',
+            fontFamily: 'Poppins',
             color: Colors.grey,
             fontSize: 14,
           ),
@@ -590,7 +590,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
           child: Text(
             "Continue",
             style: TextStyle(
-              fontFamily: 'Jost',
+              fontFamily: 'Poppins',
               color: isDark ? Colors.black : Colors.white,
               fontSize: 15,
               fontWeight: FontWeight.w400,
@@ -619,7 +619,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
           child: Text(
             "Continue",
             style: TextStyle(
-              fontFamily: 'Jost',
+              fontFamily: 'Poppins',
               color: isDark ? Colors.black : Colors.white,
               fontSize: 16,
               fontWeight: FontWeight.w400,

@@ -107,7 +107,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       style: TextStyle(
                         fontSize: 28,
                         fontWeight: FontWeight.w500,
-                        fontFamily: 'Jost',
+                        fontFamily: 'Poppins',
                       ),
                     ),
                     const Text(
@@ -115,7 +115,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       style: TextStyle(
                         fontSize: 14,
                         color: Colors.black54,
-                        fontFamily: 'Jost',
+                        fontFamily: 'Poppins',
                       ),
                     ),
                     const SizedBox(height: 25),
@@ -156,7 +156,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         const Expanded(
                           child: Text(
                             "I agree to all Term, Privacy and Fees",
-                            style: TextStyle(fontSize: 13, fontFamily: 'Jost'),
+                            style: TextStyle(fontSize: 13, fontFamily: 'Poppins'),
                           ),
                         ),
                       ],
@@ -188,7 +188,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             color: Colors.white,
                             fontSize: 16,
                             fontWeight: FontWeight.w400,
-                            fontFamily: 'Jost',
+                            fontFamily: 'Poppins',
                           ),
                         ),
                       ),
@@ -206,7 +206,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           "Already have and account? ",
                           style: TextStyle(
                             color: Colors.black54,
-                            fontFamily: 'Jost',
+                            fontFamily: 'Poppins',
                           ),
                         ),
                         GestureDetector(
@@ -223,7 +223,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               decoration: TextDecoration.underline,
-                              fontFamily: 'Jost',
+                              fontFamily: 'Poppins',
                             ),
                           ),
                         ),
@@ -260,7 +260,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
           text,
           style: TextStyle(
             fontSize: 100,
-            fontFamily: 'Jost',
+            fontFamily: 'Poppins',
             fontWeight: FontWeight.w900,
             color: const Color(0xFFDFD7CA).withOpacity(0.4),
             letterSpacing: -5,
@@ -300,7 +300,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 labelStyle: const TextStyle(
                   fontSize: 12,
                   color: Colors.grey,
-                  fontFamily: 'Jost',
+                  fontFamily: 'Poppins',
                 ),
               ),
             ),
@@ -323,7 +323,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 style: TextStyle(
                   color: Colors.black54,
                   fontSize: 12,
-                  fontFamily: 'Jost',
+                  fontFamily: 'Poppins',
                 ),
               ),
             ),
@@ -372,7 +372,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
             label,
             style: const TextStyle(
               fontWeight: FontWeight.bold,
-              fontFamily: 'Jost',
+              fontFamily: 'Poppins',
             ),
           ),
         ],

@@ -46,7 +46,7 @@ class _FaqPageState extends State<FaqPage> {
           style: TextStyle(
             fontWeight: FontWeight.bold,
             color: isDark ? Colors.white : Colors.black,
-            fontFamily: 'Jost',
+            fontFamily: 'Poppins',
           ),
         ),
         centerTitle: true,
@@ -158,7 +158,7 @@ class _FaqPageState extends State<FaqPage> {
             style: TextStyle(
               fontWeight: FontWeight.w600,
               fontSize: 15,
-              fontFamily: 'Jost',
+              fontFamily: 'Poppins',
               color: isOpen
                   ? Colors.white
                   : (isDark ? Colors.white : Colors.black),
@@ -183,7 +183,7 @@ class _FaqPageState extends State<FaqPage> {
                       : (isDark ? Colors.white70 : Colors.black87),
                   height: 1.5,
                   fontSize: 14,
-                  fontFamily: 'Jost',
+                  fontFamily: 'Poppins',
                 ),
               ),
             ),

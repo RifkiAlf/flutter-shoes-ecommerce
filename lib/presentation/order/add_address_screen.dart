@@ -25,7 +25,7 @@ class _AddAddressScreenState extends State<AddAddressScreen> {
         title: Text(
           "Add delivery address",
           style: TextStyle(
-            fontFamily: 'Jost',
+            fontFamily: 'Poppins',
             color: isDark ? Colors.white : Colors.black,
             fontWeight: FontWeight.w500,
           ),
@@ -42,7 +42,7 @@ class _AddAddressScreenState extends State<AddAddressScreen> {
                   Text(
                     "Contact Details",
                     style: TextStyle(
-                      fontFamily: 'Jost',
+                      fontFamily: 'Poppins',
                       fontWeight: FontWeight.w700,
                       fontSize: 16,
                       color: isDark ? Colors.white : Colors.black,
@@ -56,7 +56,7 @@ class _AddAddressScreenState extends State<AddAddressScreen> {
                   Text(
                     "Address",
                     style: TextStyle(
-                      fontFamily: 'Jost',
+                      fontFamily: 'Poppins',
                       fontWeight: FontWeight.w700,
                       fontSize: 16,
                       color: isDark ? Colors.white : Colors.black,
@@ -73,7 +73,7 @@ class _AddAddressScreenState extends State<AddAddressScreen> {
                   Text(
                     "Save Address As",
                     style: TextStyle(
-                      fontFamily: 'Jost',
+                      fontFamily: 'Poppins',
                       fontWeight: FontWeight.w700,
                       fontSize: 16,
                       color: isDark ? Colors.white : Colors.black,
@@ -112,7 +112,7 @@ class _AddAddressScreenState extends State<AddAddressScreen> {
           Text(
             label,
             style: TextStyle(
-              fontFamily: 'Jost',
+              fontFamily: 'Poppins',
               fontWeight: FontWeight.w500,
               fontSize: 14,
               color: isDark ? Colors.white : Colors.black,
@@ -121,7 +121,7 @@ class _AddAddressScreenState extends State<AddAddressScreen> {
           const SizedBox(height: 8),
           TextField(
             style: TextStyle(
-              fontFamily: 'Jost',
+              fontFamily: 'Poppins',
               color: isDark ? Colors.white : Colors.black,
             ),
             decoration: InputDecoration(
@@ -170,7 +170,7 @@ class _AddAddressScreenState extends State<AddAddressScreen> {
           child: Text(
             label,
             style: TextStyle(
-              fontFamily: 'Jost',
+              fontFamily: 'Poppins',
               color: isSelected
                   ? Colors.white
                   : (isDark ? Colors.white : Colors.black),
@@ -200,7 +200,7 @@ class _AddAddressScreenState extends State<AddAddressScreen> {
           child: Text(
             "Save Address",
             style: TextStyle(
-              fontFamily: 'Jost',
+              fontFamily: 'Poppins',
               color: isDark ? Colors.black : Colors.white,
               fontSize: 16,
               fontWeight: FontWeight.w600,

@@ -20,7 +20,7 @@ class NetbankingScreen extends StatelessWidget {
         title: Text(
           "Net Banking",
           style: TextStyle(
-            fontFamily: 'Jost',
+            fontFamily: 'Poppins',
             color: isDark ? Colors.white : Colors.black,
             fontWeight: FontWeight.bold,
           ),
@@ -34,13 +34,13 @@ class NetbankingScreen extends StatelessWidget {
             // Search
             TextField(
               style: TextStyle(
-                fontFamily: 'Jost',
+                fontFamily: 'Poppins',
                 color: isDark ? Colors.white : Colors.black,
               ),
               decoration: InputDecoration(
                 hintText: "Search by bank name",
                 hintStyle: TextStyle(
-                  fontFamily: 'Jost',
+                  fontFamily: 'Poppins',
                   color: isDark ? Colors.grey.shade400 : Colors.grey,
                 ),
                 prefixIcon: Icon(
@@ -68,7 +68,7 @@ class NetbankingScreen extends StatelessWidget {
             Text(
               "All Banks",
               style: TextStyle(
-                fontFamily: 'Jost',
+                fontFamily: 'Poppins',
                 fontWeight: FontWeight.bold,
                 fontSize: 16,
                 color: isDark ? Colors.white : Colors.black,
@@ -113,7 +113,7 @@ class NetbankingScreen extends StatelessWidget {
               Text(
                 "Return",
                 style: TextStyle(
-                  fontFamily: 'Jost',
+                  fontFamily: 'Poppins',
                   fontWeight: FontWeight.bold,
                   color: isDark ? Colors.white : Colors.black,
                 ),
@@ -158,7 +158,7 @@ class NetbankingScreen extends StatelessWidget {
           Text(
             "Popular Banks",
             style: TextStyle(
-              fontFamily: 'Jost',
+              fontFamily: 'Poppins',
               fontWeight: FontWeight.w600,
               fontSize: 14,
               color: isDark ? Colors.white : Colors.black,
@@ -241,7 +241,7 @@ class NetbankingScreen extends StatelessWidget {
                     child: Text(
                       name,
                       style: TextStyle(
-                        fontFamily: 'Jost',
+                        fontFamily: 'Poppins',
                         fontSize: 13,
                         color: isDark ? Colors.white : Colors.black,
                       ),

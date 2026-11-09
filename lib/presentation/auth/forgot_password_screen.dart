@@ -110,7 +110,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                           style: TextStyle(
                             fontSize: 28,
                             fontWeight: FontWeight.w500,
-                            fontFamily: 'Jost',
+                            fontFamily: 'Poppins',
                           ),
                         ),
                         const SizedBox(height: 8),
@@ -119,7 +119,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                           style: TextStyle(
                             fontSize: 14,
                             color: Colors.black54,
-                            fontFamily: 'Jost',
+                            fontFamily: 'Poppins',
                             height: 1.4,
                           ),
                         ),
@@ -160,7 +160,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                                 color: Colors.white,
                                 fontSize: 18,
                                 fontWeight: FontWeight.w400,
-                                fontFamily: 'Jost',
+                                fontFamily: 'Poppins',
                               ),
                             ),
                           ),
@@ -183,7 +183,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                             text: const TextSpan(
                               style: TextStyle(
                                 color: Colors.black,
-                                fontFamily: 'Jost',
+                                fontFamily: 'Poppins',
                                 fontSize: 14,
                               ),
                               children: [
@@ -232,7 +232,7 @@ class ForgotPasswordScreen extends StatelessWidget {
           "SHOES",
           style: TextStyle(
             fontSize: 100,
-            fontFamily: 'Jost',
+            fontFamily: 'Poppins',
             fontWeight: FontWeight.w900,
             color: const Color(0xFFDFD7CA).withOpacity(0.4),
             letterSpacing: -5,
@@ -270,7 +270,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                 labelStyle: const TextStyle(
                   fontSize: 12,
                   color: Colors.grey,
-                  fontFamily: 'Jost',
+                  fontFamily: 'Poppins',
                 ),
               ),
             ),

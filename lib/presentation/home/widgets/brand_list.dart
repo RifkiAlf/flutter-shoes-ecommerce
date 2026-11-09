@@ -29,11 +29,12 @@ class BrandList extends StatelessWidget {
         itemBuilder: (context, index) {
           return GestureDetector(
             onTap: () {
-              Navigator.pushReplacement(
+              Navigator.pushAndRemoveUntil(
                 context,
                 MaterialPageRoute(
                   builder: (_) => const MainScreen(initialIndex: 3),
                 ),
+                (route) => false,
               );
             },
             child: Padding(
@@ -61,7 +62,7 @@ class BrandList extends StatelessWidget {
                   Text(
                     brands[index]['name']!,
                     style: TextStyle(
-                      fontFamily: 'Jost',
+                      fontFamily: 'Poppins',
                       fontSize: 12, // Diperkecil agar lebih rapi
                       fontWeight: FontWeight.w600,
                       color: Theme.of(context).colorScheme.onSurface,

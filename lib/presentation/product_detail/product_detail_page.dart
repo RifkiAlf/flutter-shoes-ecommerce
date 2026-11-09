@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import '../order/cart_screen.dart';
 import '../main_screen.dart'; // PASTIKAN IMPORT INI ADA
+import '../../models/product_models.dart';
+import '../../utils/wishlist_manager.dart';
 
 class ProductDetailPage extends StatefulWidget {
   final Map<String, dynamic> product;
@@ -16,8 +18,6 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
   int _selectedSizeIndex = 0;
   int _selectedThumbnailIndex = 0;
 
-  bool isFavorite = false;
-
   final List<String> _sizes = ['6.5', '7', '7.5', '8', '8.5', '9', '9.5'];
 
   final List<Color> _colors = [
@@ -31,9 +31,19 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
   Widget build(BuildContext context) {
     final iconColor = Theme.of(context).colorScheme.onSurface;
     final bgColor = Theme.of(context).scaffoldBackgroundColor;
+    final isDark = Theme.of(context).brightness == Brightness.dark;
 
-    return Scaffold(
-      backgroundColor: bgColor,
+    return ListenableBuilder(
+      listenable: WishlistManager.instance,
+      builder: (context, _) {
+        final isFavorite = WishlistManager.instance.isFavorite(
+          id: widget.product['id']?.toString(),
+          name: widget.product['name']?.toString(),
+          image: widget.product['image']?.toString(),
+        );
+
+        return Scaffold(
+          backgroundColor: bgColor,
 
       // ================= APPBAR =================
       // ================= APP BAR =================
@@ -59,7 +69,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
         title: Text(
           "Product Details",
           style: TextStyle(
-            fontFamily: 'Jost',
+            fontFamily: 'Poppins',
             fontWeight: FontWeight.w600,
             fontSize: 16,
             color: iconColor,
@@ -196,9 +206,21 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                   // LOVE BUTTON
                   GestureDetector(
                     onTap: () {
-                      setState(() {
-                        isFavorite = !isFavorite;
-                      });
+                      final prod = Product.fromMap(widget.product);
+                      final isAdded = WishlistManager.instance.toggle(prod);
+                      ScaffoldMessenger.of(context).hideCurrentSnackBar();
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          content: Text(
+                            isAdded
+                                ? '${widget.product['name']} ditambahkan ke Wishlist'
+                                : '${widget.product['name']} dihapus dari Wishlist',
+                            style: const TextStyle(fontFamily: 'Poppins'),
+                          ),
+                          duration: const Duration(seconds: 1),
+                          behavior: SnackBarBehavior.floating,
+                        ),
+                      );
                     },
                     child: AnimatedScale(
                       duration: const Duration(milliseconds: 180),
@@ -210,13 +232,15 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                         decoration: BoxDecoration(
                           color: isFavorite
                               ? const Color(0xFFFF375F)
-                              : const Color(0xFFF2F2F2),
+                              : (isDark ? Colors.white10 : const Color(0xFFF2F2F2)),
                           borderRadius: BorderRadius.circular(8),
                         ),
                         child: Icon(
                           Icons.favorite,
                           size: 18,
-                          color: isFavorite ? Colors.white : Colors.black,
+                          color: isFavorite
+                              ? Colors.white
+                              : (isDark ? Colors.white : Colors.black),
                         ),
                       ),
                     ),
@@ -270,6 +294,8 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
           ),
         ),
       ),
+    );
+      },
     );
   }
 

@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'presentation/home/home_page.dart';
-// --- TAMBAHKAN IMPORT INI ---
-import 'presentation/main_screen.dart';
 import 'presentation/auth/splash_screen.dart';
 
 // Variabel global untuk mengatur tema
@@ -26,7 +23,7 @@ class FootFlareApp extends StatelessWidget {
 
           // --- PENGATURAN MODE SIANG ---
           theme: ThemeData(
-            fontFamily: 'Jost',
+            fontFamily: 'Poppins',
             scaffoldBackgroundColor: Colors.white,
             colorScheme: const ColorScheme.light(
               primary: Colors.black,
@@ -41,7 +38,7 @@ class FootFlareApp extends StatelessWidget {
                 color: Colors.black,
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
-                fontFamily: 'Jost',
+                fontFamily: 'Poppins',
               ),
             ),
             drawerTheme: const DrawerThemeData(backgroundColor: Colors.white),
@@ -49,7 +46,7 @@ class FootFlareApp extends StatelessWidget {
 
           // --- PENGATURAN MODE MALAM ---
           darkTheme: ThemeData(
-            fontFamily: 'Jost',
+            fontFamily: 'Poppins',
             scaffoldBackgroundColor: const Color(0xFF1B1D27), // Warna background utama
             colorScheme: const ColorScheme.dark(
               primary: Colors.white,
@@ -66,7 +63,7 @@ class FootFlareApp extends StatelessWidget {
                 color: Colors.white,
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
-                fontFamily: 'Jost',
+                fontFamily: 'Poppins',
               ),
             ),
             drawerTheme: const DrawerThemeData(

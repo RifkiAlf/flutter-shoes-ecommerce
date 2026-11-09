@@ -4,7 +4,6 @@ import 'widgets/side_drawer.dart';
 import 'widgets/promo_banner.dart';
 import 'widgets/brand_list.dart';
 import 'widgets/product_grid.dart';
-import '../category/category_page.dart';
 import '../main_screen.dart';
 
 class HomePage extends StatefulWidget {
@@ -96,11 +95,12 @@ class _HomePageState extends State<HomePage> {
                 selectedCategory = i;
               });
 
-              Navigator.pushReplacement(
+              Navigator.pushAndRemoveUntil(
                 context,
                 MaterialPageRoute(
                   builder: (_) => const MainScreen(initialIndex: 3),
                 ),
+                (route) => false,
               );
             },            
           );
@@ -119,14 +119,14 @@ class _HomePageState extends State<HomePage> {
               style: TextStyle(
                 color: isDark ? Colors.white : Colors.black,
                 fontSize: 16,
-                fontFamily: 'Jost',
+                fontFamily: 'Poppins',
               ),
               decoration: InputDecoration(
                 hintText: 'Search Product',
                 hintStyle: TextStyle(
                   color: Colors.grey.shade500, // Diperjelas warnanya agar lebih terbaca (awalnya shade400)
                   fontSize: 15,
-                  fontFamily: 'Jost',
+                  fontFamily: 'Poppins',
                 ),
                 contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 0),
                 filled: true,
@@ -174,7 +174,7 @@ class _HomePageState extends State<HomePage> {
         Text(
           title,
           style: TextStyle(
-            fontFamily: 'Jost',
+            fontFamily: 'Poppins',
             fontSize: 20, 
             fontWeight: FontWeight.w700,
             color: Theme.of(context).colorScheme.onSurface,
@@ -184,7 +184,7 @@ class _HomePageState extends State<HomePage> {
           Text(
             action,
             style: TextStyle(
-              fontFamily: 'Jost',
+              fontFamily: 'Poppins',
               fontSize: 14,
               fontWeight: FontWeight.w500,
               decoration: TextDecoration.underline,
@@ -240,7 +240,7 @@ class _HoverCategoryItemState extends State<_HoverCategoryItem> {
             child: Text(
               widget.text,
               style: TextStyle(
-                fontFamily: 'Jost',
+                fontFamily: 'Poppins',
                 fontSize: 14, // Diperkecil kembali ke 14
                 color: active ? Colors.white : (widget.isDark ? Colors.white70 : Colors.black87),
                 fontWeight: active ? FontWeight.w600 : FontWeight.w500,

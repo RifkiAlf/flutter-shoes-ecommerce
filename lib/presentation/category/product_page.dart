@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import 'category_page.dart';
 import 'widgets/product_action_sheet.dart';
 import '../product_detail/product_detail_page.dart';
-import '../order/cart_screen.dart';
 import '../main_screen.dart';
+import '../../models/product_models.dart';
+import '../../utils/wishlist_manager.dart';
 
 class ProductPage extends StatefulWidget {
   const ProductPage({super.key});
@@ -45,52 +45,64 @@ class _ProductPageState extends State<ProductPage>
   // --- DATA PRODUK LENGKAP ---
   final List<Map<String, dynamic>> items = [
     {
+      "id": "1",
       "name": "Swift Glide Sprinter Soles",
       "price": "\$199",
       "image": "assets/product/pic1.png",
       "sale": "30% OFF",
       "black": true,
       "fav": false,
+      "category": "Man",
     },
     {
+      "id": "2",
       "name": "Echo Vibe Urban Runners",
       "price": "\$149",
       "image": "assets/product/pic2.png",
       "sale": "",
       "black": false,
       "fav": false,
+      "category": "Woman",
     },
     {
+      "id": "3",
       "name": "Zen Dash Active Flex Shoes",
       "price": "\$299",
       "image": "assets/product/pic3.png",
       "sale": "",
       "black": false,
-      "fav": true,
+      "fav": false,
+      "category": "Unisex",
     },
     {
+      "id": "4",
       "name": "Nova Stride Street Stompers",
       "price": "\$99",
       "image": "assets/product/pic4.png",
       "sale": "30% OFF",
       "black": false,
       "fav": false,
+      "category": "Child",
     },
     {
+      "id": "5",
       "name": "Evo Quip Evo Quick Strides",
       "price": "\$199",
       "image": "assets/product/pic5.png",
       "sale": "30% OFF",
       "black": true,
       "fav": false,
+      "category": "Man",
     },
     {
-      "name": "Echo Vibe Urban Runners",
+      "id": "6",
+      "name": "Urban Kicks Classic",
       "price": "\$84",
       "image": "assets/product/pic6.png",
       "sale": "20% OFF",
       "black": false,
       "fav": false,
+      "category": "Woman",
     },
   ];
 
@@ -293,7 +305,7 @@ class _ProductPageState extends State<ProductPage>
             const Text(
               "Price:",
               style: TextStyle(
-                fontFamily: 'Jost',
+                fontFamily: 'Poppins',
                 fontWeight: FontWeight.w700,
                 fontSize: 16,
               ),
@@ -355,7 +367,7 @@ class _ProductPageState extends State<ProductPage>
       Text(
         title,
         style: const TextStyle(
-          fontFamily: 'Jost',
+          fontFamily: 'Poppins',
           fontWeight: FontWeight.w700,
           fontSize: 16,
         ),
@@ -363,7 +375,7 @@ class _ProductPageState extends State<ProductPage>
       Text(
         action,
         style: const TextStyle(
-          fontFamily: 'Jost',
+          fontFamily: 'Poppins',
           decoration: TextDecoration.underline,
           fontSize: 12,
         ),
@@ -419,7 +431,7 @@ class _ProductPageState extends State<ProductPage>
             Text(
               name,
               style: TextStyle(
-                fontFamily: 'Jost',
+                fontFamily: 'Poppins',
                 fontSize: 12,
                 fontWeight: isSelected ? FontWeight.w700 : FontWeight.w500,
               ),
@@ -451,7 +463,7 @@ class _ProductPageState extends State<ProductPage>
     ),
     child: Text(
       text,
-      style: const TextStyle(fontFamily: 'Jost', fontWeight: FontWeight.w700),
+      style: const TextStyle(fontFamily: 'Poppins', fontWeight: FontWeight.w700),
     ),
   );
 
@@ -475,7 +487,7 @@ class _ProductPageState extends State<ProductPage>
     child: Text(
       t,
       style: const TextStyle(
-        fontFamily: 'Jost',
+        fontFamily: 'Poppins',
         fontWeight: FontWeight.w700,
         fontSize: 16,
       ),
@@ -638,7 +650,7 @@ Widget _buildPopupUI(
                 Text(
                   popupTitle,
                   style: TextStyle(
-                    fontFamily: 'Jost',
+                    fontFamily: 'Poppins',
                     fontSize: 22,
                     fontWeight:
                         FontWeight.w600,
@@ -807,7 +819,7 @@ Widget _searchField(bool isDark) =>
           Text(
             "Search Products",
             style: TextStyle(
-              fontFamily: 'Jost',
+              fontFamily: 'Poppins',
               fontSize: 12,
               color: isDark
                   ? Colors.white70
@@ -882,28 +894,49 @@ Widget _cartIcon(bool isDark) =>
       ),
     );
 
-  Widget _buildProductGrid(double width,bool isDark) => Expanded(
-    child: GridView.builder(
-      itemCount: items.length,
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,
-        crossAxisSpacing: 12,
-        mainAxisSpacing: 14,
-        childAspectRatio: width < 380 ? 0.61 : 0.64,
-      ),
-      itemBuilder: (context, index) => _ProductItemCard(
-        item: items[index],
-        onFavToggle: () =>
-            setState(() => items[index]["fav"] = !items[index]["fav"]),
+  Widget _buildProductGrid(double width, bool isDark) => Expanded(
+    child: ListenableBuilder(
+      listenable: WishlistManager.instance,
+      builder: (context, _) => GridView.builder(
+        itemCount: items.length,
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          crossAxisSpacing: 12,
+          mainAxisSpacing: 14,
+          childAspectRatio: width < 380 ? 0.61 : 0.64,
+        ),
+        itemBuilder: (context, index) {
+          final i = Map<String, dynamic>.from(items[index]);
+          i["fav"] = WishlistManager.instance.isFavorite(
+            id: i["id"],
+            name: i["name"],
+            image: i["image"],
+          );
+          return _ProductItemCard(
+            item: i,
+            onFavToggle: () {
+              final prod = Product.fromMap(i);
+              WishlistManager.instance.toggle(prod);
+            },
+          );
+        },
       ),
     ),
   );
 
   Widget _buildProductList(bool isDark) => Expanded(
-    child: ListView.builder(
-      itemCount: items.length,
-      itemBuilder: (context, index) {
-        final i = items[index];
+    child: ListenableBuilder(
+      listenable: WishlistManager.instance,
+      builder: (context, _) => ListView.builder(
+        itemCount: items.length,
+        itemBuilder: (context, index) {
+          final i = Map<String, dynamic>.from(items[index]);
+          final isFav = WishlistManager.instance.isFavorite(
+            id: i["id"],
+            name: i["name"],
+            image: i["image"],
+          );
+          i["fav"] = isFav;
 
         return StatefulBuilder(
           builder: (context, setLocal) {
@@ -962,9 +995,8 @@ Widget _cartIcon(bool isDark) =>
                                 animate = true;
                               });
 
-                              setState(() {
-                                items[index]["fav"] = !items[index]["fav"];
-                              });
+                              final prod = Product.fromMap(i);
+                              WishlistManager.instance.toggle(prod);
 
                               Future.delayed(
                                 const Duration(milliseconds: 180),
@@ -978,7 +1010,7 @@ Widget _cartIcon(bool isDark) =>
                               );
                             },
                             child: TweenAnimationBuilder<double>(
-                              tween: Tween(begin: 1, end: i["fav"] ? 1.35 : 1),
+                              tween: Tween(begin: 1, end: isFav ? 1.35 : 1),
                               duration: const Duration(milliseconds: 220),
                               curve: Curves.easeOutBack,
                               builder: (context, value, child) {
@@ -988,10 +1020,10 @@ Widget _cartIcon(bool isDark) =>
                                 );
                               },
                               child: Icon(
-                                i["fav"]
+                                isFav
                                     ? Icons.favorite
                                     : Icons.favorite_border,
-                                color: i["fav"]
+                                color: isFav
                                     ? Colors.red
                                     : Colors.grey.shade400,
                                 size: 22,
@@ -1025,7 +1057,7 @@ Widget _cartIcon(bool isDark) =>
                               overflow:
                                   TextOverflow.ellipsis,
                               style: TextStyle(
-                                fontFamily: 'Jost',
+                                fontFamily: 'Poppins',
                                 fontSize: 16,
                                 fontWeight:
                                     FontWeight.w700,
@@ -1038,7 +1070,7 @@ Widget _cartIcon(bool isDark) =>
                             Text(
                               i["price"],
                               style: const TextStyle(
-                                fontFamily: 'Jost',
+                                fontFamily: 'Poppins',
                                 fontSize: 28,
                                 fontWeight:
                                     FontWeight.w700,
@@ -1093,6 +1125,7 @@ Widget _cartIcon(bool isDark) =>
         );
       },
     ),
+  ),
   );
 
   Widget _buildTabs(bool isDark) => SizedBox(
@@ -1221,7 +1254,7 @@ class _ProductItemCardState extends State<_ProductItemCard>
                           child: Text(
                             i["sale"],
                             style: const TextStyle(
-                              fontFamily: 'Jost',
+                              fontFamily: 'Poppins',
                               fontSize: 11,
                               fontWeight: FontWeight.w700,
                               color: Colors.white,
@@ -1240,7 +1273,7 @@ class _ProductItemCardState extends State<_ProductItemCard>
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
             style: const TextStyle(
-              fontFamily: 'Jost',
+              fontFamily: 'Poppins',
               fontSize: 13,
               fontWeight: FontWeight.w700,
             ),
@@ -1252,7 +1285,7 @@ class _ProductItemCardState extends State<_ProductItemCard>
               Text(
                 i["price"],
                 style: const TextStyle(
-                  fontFamily: 'Jost',
+                  fontFamily: 'Poppins',
                   fontSize: 18,
                   fontWeight: FontWeight.w700,
                 ),
@@ -1312,7 +1345,7 @@ class _HoverTabState extends State<_HoverTab> {
             child: Text(
               widget.text,
               style: TextStyle(
-                fontFamily: 'Jost',
+                fontFamily: 'Poppins',
                 fontSize: 12,
                 fontWeight: FontWeight.w600,
                 color: d ? Colors.white : Colors.black,

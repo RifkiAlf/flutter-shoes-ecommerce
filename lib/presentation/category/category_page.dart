@@ -120,13 +120,17 @@ class _CategoryPageState extends State<CategoryPage> {
           ),
           child: IconButton(
             onPressed: () {
-              Navigator.pushAndRemoveUntil(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const MainScreen(initialIndex: 0),
-                ),
-                (route) => false,
-              );
+              if (Navigator.canPop(context)) {
+                Navigator.pop(context);
+              } else {
+                Navigator.pushAndRemoveUntil(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const MainScreen(initialIndex: 0),
+                  ),
+                  (route) => false,
+                );
+              }
             },
             style: ButtonStyle(
               overlayColor: WidgetStateProperty.all(Colors.transparent),
@@ -144,7 +148,7 @@ class _CategoryPageState extends State<CategoryPage> {
       title: Text(
         "Category",
         style: TextStyle(
-          fontFamily: 'Jost',
+          fontFamily: 'Poppins',
           fontSize: 22,
           fontWeight: FontWeight
               .w700, // Kamu bisa sesuaikan w500/w700 agar konsisten dengan cart
@@ -186,7 +190,7 @@ class _CategoryPageState extends State<CategoryPage> {
         Text(
           title,
           style: const TextStyle(
-            fontFamily: 'Jost',
+            fontFamily: 'Poppins',
             fontSize: 20,
             fontWeight: FontWeight.w700,
           ),
@@ -195,7 +199,7 @@ class _CategoryPageState extends State<CategoryPage> {
           Text(
             action,
             style: const TextStyle(
-              fontFamily: 'Jost',
+              fontFamily: 'Poppins',
               fontSize: 15,
               fontWeight: FontWeight.w500,
               decoration: TextDecoration.underline,
@@ -206,8 +210,10 @@ class _CategoryPageState extends State<CategoryPage> {
   }
 
   Widget _buildBrandList() {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+
     return SizedBox(
-      height: 100,
+      height: 110,
       child: _scrollConfig(
         ListView.builder(
           controller: brandController,
@@ -216,34 +222,41 @@ class _CategoryPageState extends State<CategoryPage> {
           itemBuilder: (_, i) {
             final item = brands[i];
 
-            return Container(
-              margin: const EdgeInsets.only(right: 14),
-              child: Column(
-                children: [
-                  Container(
-                    width: 72,
-                    height: 72,
-                    padding: const EdgeInsets.all(18),
-                    decoration: BoxDecoration(
-                    color: Colors.white,
-                    shape: BoxShape.circle,
-                    border: Border.all(
-                      color: Theme.of(context).brightness == Brightness.dark
-                          ? Colors.white24
-                          : Colors.black12,
+            return GestureDetector(
+              onTap: openProductPage,
+              child: Container(
+                margin: const EdgeInsets.only(right: 14),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Container(
+                      width: 66,
+                      height: 66,
+                      padding: const EdgeInsets.all(14),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        shape: BoxShape.circle,
+                        border: Border.all(
+                          color: isDark ? Colors.white24 : Colors.black12,
+                        ),
+                      ),
+                      child: Image.asset(
+                        item["image"]!,
+                        fit: BoxFit.contain,
+                      ),
                     ),
-                  ),
-                    child: Image.asset(item["image"]!),
-                  ),
-                  const SizedBox(height: 8),
-                  Text(
-                    item["name"]!,
-                    style: const TextStyle(
-                      fontFamily: 'Jost',
-                      fontWeight: FontWeight.w600,
+                    const SizedBox(height: 8),
+                    Text(
+                      item["name"]!,
+                      style: TextStyle(
+                        fontFamily: 'Poppins',
+                        fontSize: 13,
+                        fontWeight: FontWeight.w600,
+                        color: isDark ? Colors.white : Colors.black,
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             );
           },
@@ -321,7 +334,7 @@ class _CategoryPageState extends State<CategoryPage> {
                     child: Text(
                       "${item["title"]} (${item["items"]})",
                       style: const TextStyle(
-                        fontFamily: 'Jost',
+                        fontFamily: 'Poppins',
                         color: Colors.white,
                         fontWeight: FontWeight.w700,
                       ),
@@ -387,7 +400,7 @@ class _HoverItemState extends State<_HoverItem> {
             child: Text(
               widget.text,
               style: TextStyle(
-                fontFamily: 'Jost',
+                fontFamily: 'Poppins',
                 fontWeight: FontWeight.w600,
                 color: dark ? Colors.white : Colors.black,
               ),

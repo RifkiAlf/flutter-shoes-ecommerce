@@ -114,7 +114,7 @@ class _BottomMenuBtn extends StatelessWidget {
             Text(
               text,
               style: const TextStyle(
-                fontFamily: 'Jost',
+                fontFamily: 'Poppins',
                 fontSize: 14, // Diperbesar dari 13 ke 14
                 fontWeight: FontWeight.w600,
                 letterSpacing: 0.5,
@@ -159,7 +159,7 @@ class ActionChipBtn extends StatelessWidget {
         child: Text(
           text,
           style: TextStyle(
-            fontFamily: 'Jost',
+            fontFamily: 'Poppins',
             fontSize: 14, // Disamakan menjadi 14
             fontWeight: FontWeight.w600,
             color: active ? Colors.white : Colors.black,
@@ -194,7 +194,7 @@ class ActionMenuBox extends StatelessWidget {
       child: Text(
         text,
         style: const TextStyle(
-          fontFamily: 'Jost',
+          fontFamily: 'Poppins',
           fontSize: 14, // Disamakan menjadi 14
           fontWeight: FontWeight.w600,
         ),

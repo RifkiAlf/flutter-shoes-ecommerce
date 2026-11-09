@@ -32,7 +32,7 @@ class _WriteReviewScreenState extends State<WriteReviewScreen> {
         title: Text(
           "Write Review",
           style: TextStyle(
-            fontFamily: 'Jost',
+            fontFamily: 'Poppins',
             color: isDark ? Colors.white : Colors.black,
             fontWeight: FontWeight.w500,
           ),
@@ -54,7 +54,7 @@ class _WriteReviewScreenState extends State<WriteReviewScreen> {
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.w600,
-                fontFamily: 'Jost',
+                fontFamily: 'Poppins',
                 color: isDark ? Colors.white : Colors.black,
               ),
             ),
@@ -146,7 +146,7 @@ class _WriteReviewScreenState extends State<WriteReviewScreen> {
             style: TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.w400,
-              fontFamily: 'Jost',
+              fontFamily: 'Poppins',
             ),
           ),
         ),
@@ -240,7 +240,7 @@ class _WriteReviewScreenState extends State<WriteReviewScreen> {
                 Text(
                   item['name']!,
                   style: TextStyle(
-                    fontFamily: 'Jost',
+                    fontFamily: 'Poppins',
                     fontWeight: FontWeight.w500,
                     fontSize: 15,
                     color: isDark ? Colors.white : Colors.black,

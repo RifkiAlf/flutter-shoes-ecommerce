@@ -30,7 +30,7 @@ class CouponsPage extends StatelessWidget {
         ),
         title: const Text(
           'My Coupons',
-          style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'Jost'),
+          style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'Poppins'),
         ),
         centerTitle: true,
       ),
@@ -103,7 +103,7 @@ class CouponCard extends StatelessWidget {
                     fontSize: 22,
                     fontWeight: FontWeight.bold,
                     color: onSurface,
-                    fontFamily: 'Jost',
+                    fontFamily: 'Poppins',
                   ),
                 ),
                 Text(
@@ -111,7 +111,7 @@ class CouponCard extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 14,
                     color: onSurface.withOpacity(0.6),
-                    fontFamily: 'Jost',
+                    fontFamily: 'Poppins',
                   ),
                 ),
               ],
@@ -135,7 +135,7 @@ class CouponCard extends StatelessWidget {
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
                       color: onSurface,
-                      fontFamily: 'Jost',
+                      fontFamily: 'Poppins',
                     ),
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
@@ -146,7 +146,7 @@ class CouponCard extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 12,
                       color: onSurface.withOpacity(0.5),
-                      fontFamily: 'Jost',
+                      fontFamily: 'Poppins',
                     ),
                   ),
                 ],

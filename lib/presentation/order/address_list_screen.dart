@@ -58,7 +58,7 @@ class _AddressListScreenState extends State<AddressListScreen> {
         title: Text(
           "Delivery Address",
           style: TextStyle(
-            fontFamily: 'Jost',
+            fontFamily: 'Poppins',
             color: isDark ? Colors.white : Colors.black,
             fontWeight: FontWeight.w500,
           ),
@@ -118,7 +118,7 @@ class _AddressListScreenState extends State<AddressListScreen> {
                     Text(
                       addr['type'],
                       style: TextStyle(
-                        fontFamily: 'Jost',
+                        fontFamily: 'Poppins',
                         fontWeight: FontWeight.w600,
                         fontSize: 15,
                         color: isDark ? Colors.white : Colors.black,
@@ -127,7 +127,7 @@ class _AddressListScreenState extends State<AddressListScreen> {
                     Text(
                       addr['desc'],
                       style: const TextStyle(
-                        fontFamily: 'Jost',
+                        fontFamily: 'Poppins',
                         color: Colors.grey,
                         fontSize: 13,
                       ),
@@ -186,7 +186,7 @@ class _AddressListScreenState extends State<AddressListScreen> {
               Text(
                 "Add Address",
                 style: TextStyle(
-                  fontFamily: 'Jost',
+                  fontFamily: 'Poppins',
                   fontWeight: FontWeight.w500,
                   fontSize: 15,
                   color: isDark ? Colors.white : Colors.black,
@@ -223,7 +223,7 @@ class _AddressListScreenState extends State<AddressListScreen> {
           child: Text(
             "Save Address",
             style: TextStyle(
-              fontFamily: 'Jost',
+              fontFamily: 'Poppins',
               color: isDark ? Colors.black : Colors.white,
               fontSize: 16,
               fontWeight: FontWeight.w400,

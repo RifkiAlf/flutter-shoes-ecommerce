@@ -45,12 +45,17 @@ class _FootFlareProfileState extends State<FootFlareProfile> {
           padding: const EdgeInsets.only(left: 15, top: 8, bottom: 8),
           child: GestureDetector(
             onTap: () {
-              // PERBAIKAN: Langsung arahkan ke MainScreen dan hapus stack navigasi
-              Navigator.pushAndRemoveUntil(
-                context,
-                MaterialPageRoute(builder: (context) => const MainScreen()),
-                (route) => false,
-              );
+              if (Navigator.canPop(context)) {
+                Navigator.pop(context);
+              } else {
+                Navigator.pushAndRemoveUntil(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const MainScreen(initialIndex: 0),
+                  ),
+                  (route) => false,
+                );
+              }
             },
             child: _buildSquareButton(
               context,
@@ -66,7 +71,7 @@ class _FootFlareProfileState extends State<FootFlareProfile> {
             fontWeight: FontWeight.bold,
             fontSize: 18,
             color: textColor,
-            fontFamily: 'Jost',
+            fontFamily: 'Poppins',
           ),
         ),
         actions: [
@@ -100,7 +105,7 @@ class _FootFlareProfileState extends State<FootFlareProfile> {
                     style: TextStyle(
                       fontSize: 20,
                       color: textColor,
-                      fontFamily: 'Jost',
+                      fontFamily: 'Poppins',
                     ),
                     children: [
                       const TextSpan(text: "Hello, "),
@@ -188,7 +193,7 @@ class _FootFlareProfileState extends State<FootFlareProfile> {
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
-                fontFamily: 'Jost',
+                fontFamily: 'Poppins',
                 color: textColor,
               ),
             ),
@@ -248,7 +253,7 @@ class _FootFlareProfileState extends State<FootFlareProfile> {
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
-                fontFamily: 'Jost',
+                fontFamily: 'Poppins',
                 color: textColor,
               ),
             ),
@@ -303,7 +308,7 @@ class _FootFlareProfileState extends State<FootFlareProfile> {
           style: TextStyle(
             fontWeight: FontWeight.w600,
             fontSize: 14,
-            fontFamily: 'Jost',
+            fontFamily: 'Poppins',
             color: isDark ? Colors.white : Colors.black,
           ),
         ),
@@ -330,7 +335,7 @@ class _FootFlareProfileState extends State<FootFlareProfile> {
         style: TextStyle(
           fontSize: 15,
           fontWeight: FontWeight.w500,
-          fontFamily: 'Jost',
+          fontFamily: 'Poppins',
           color: textColor,
         ),
       ),
@@ -402,7 +407,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
           'Edit Profile',
           style: TextStyle(
             fontWeight: FontWeight.bold,
-            fontFamily: 'Jost',
+            fontFamily: 'Poppins',
             color: textColor,
           ),
         ),
@@ -482,7 +487,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                   style: TextStyle(
                     color: isDark ? Colors.black : Colors.white,
                     fontWeight: FontWeight.bold,
-                    fontFamily: 'Jost',
+                    fontFamily: 'Poppins',
                   ),
                 ),
               ),
@@ -516,7 +521,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                 padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
                 child: TextFormField(
                   initialValue: initialValue,
-                  style: TextStyle(fontFamily: 'Jost', fontWeight: FontWeight.w600, color: textColor),
+                  style: TextStyle(fontFamily: 'Poppins', fontWeight: FontWeight.w600, color: textColor),
                   decoration: InputDecoration(
                     labelText: label,
                     labelStyle: const TextStyle(color: Colors.grey, fontSize: 12),

@@ -10,7 +10,6 @@ class PromoBanner extends StatefulWidget {
 
 class _PromoBannerState extends State<PromoBanner> {
   final PageController _pageController = PageController(initialPage: 3000);
-  int _currentPage = 3000;
 
   // Data Produk Promo
   final List<Map<String, String>> _promos = [
@@ -41,7 +40,6 @@ class _PromoBannerState extends State<PromoBanner> {
   Widget build(BuildContext context) {
     // 1. Deteksi tema aktif (Dark/Light) dari context
     final isDark = Theme.of(context).brightness == Brightness.dark;
-    final colorScheme = Theme.of(context).colorScheme;
 
     return Container(
       width: double.infinity,
@@ -112,11 +110,6 @@ class _PromoBannerState extends State<PromoBanner> {
           // --- KONTEN DINAMIS (TEKS & TOMBOL) ---
           PageView.builder(
             controller: _pageController,
-            onPageChanged: (index) {
-              setState(() {
-                _currentPage = index;
-              });
-            },
             itemBuilder: (context, index) {
               final realIndex = index % _promos.length;
               final promo = _promos[realIndex];
@@ -165,7 +158,7 @@ class _PromoBannerState extends State<PromoBanner> {
                             child: Text(
                               promo['title']!,
                               style: const TextStyle(
-                                fontFamily: 'Jost',
+                                fontFamily: 'Poppins',
                                 fontWeight: FontWeight.w600,
                                 fontSize: 24, // Diperkecil Sedikit
                                 height: 1.15, // Jarak Baris Rapat
@@ -208,7 +201,7 @@ class _PromoBannerState extends State<PromoBanner> {
                               child: const Text(
                                 'Shop Now', 
                                 style: TextStyle(
-                                  fontFamily: 'Jost',
+                                  fontFamily: 'Poppins',
                                   fontSize: 13, // Diperkecil
                                   fontWeight: FontWeight.w600 
                                 )

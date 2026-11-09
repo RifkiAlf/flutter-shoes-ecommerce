@@ -42,7 +42,7 @@ class CheckoutScreen extends StatelessWidget {
         title: Text(
           "Checkout",
           style: TextStyle(
-            fontFamily: 'Jost',
+            fontFamily: 'Poppins',
             color: isDark ? Colors.white : Colors.black,
             fontWeight: FontWeight.w500,
           ),
@@ -89,7 +89,7 @@ class CheckoutScreen extends StatelessWidget {
                   Text(
                     "Additional Notes:",
                     style: TextStyle(
-                      fontFamily: 'Jost',
+                      fontFamily: 'Poppins',
                       fontSize: 16,
                       fontWeight: FontWeight.w500,
                       color: isDark ? Colors.white : Colors.black,
@@ -156,7 +156,7 @@ class CheckoutScreen extends StatelessWidget {
                     Text(
                       "My Order",
                       style: TextStyle(
-                        fontFamily: 'Jost',
+                        fontFamily: 'Poppins',
                         fontSize: 20,
                         fontWeight: FontWeight.w600,
                         color: isDark ? Colors.white : Colors.black,
@@ -165,7 +165,7 @@ class CheckoutScreen extends StatelessWidget {
                     Text(
                       "\$${totalOrder.toStringAsFixed(2)}",
                       style: TextStyle(
-                        fontFamily: 'Jost',
+                        fontFamily: 'Poppins',
                         fontSize: 20,
                         fontWeight: FontWeight.w600,
                         color: isDark ? Colors.white : Colors.black,
@@ -218,7 +218,7 @@ class CheckoutScreen extends StatelessWidget {
                     Text(
                       title,
                       style: TextStyle(
-                        fontFamily: 'Jost',
+                        fontFamily: 'Poppins',
                         fontWeight: FontWeight.w600,
                         fontSize: 15,
                         color: isDark ? Colors.white : Colors.black,
@@ -227,7 +227,7 @@ class CheckoutScreen extends StatelessWidget {
                     Text(
                       subtitle,
                       style: const TextStyle(
-                        fontFamily: 'Jost',
+                        fontFamily: 'Poppins',
                         color: Colors.grey,
                         fontSize: 13,
                       ),
@@ -263,7 +263,7 @@ class CheckoutScreen extends StatelessWidget {
             child: Text(
               label,
               style: TextStyle(
-                fontFamily: 'Jost',
+                fontFamily: 'Poppins',
                 fontSize: 15,
                 color: isDark ? Colors.white : Colors.black,
               ),
@@ -272,7 +272,7 @@ class CheckoutScreen extends StatelessWidget {
           Text(
             value,
             style: TextStyle(
-              fontFamily: 'Jost',
+              fontFamily: 'Poppins',
               fontSize: 15,
               color: isGreen
                   ? Colors.green
@@ -310,7 +310,7 @@ class CheckoutScreen extends StatelessWidget {
         child: Text(
           "Submit Order",
           style: TextStyle(
-            fontFamily: 'Jost',
+            fontFamily: 'Poppins',
             color: isDark ? Colors.black : Colors.white,
             fontSize: 16,
             fontWeight: FontWeight.w400,
@@ -350,13 +350,13 @@ class CheckoutScreen extends StatelessWidget {
     return TextField(
       maxLines: 3,
       style: TextStyle(
-        fontFamily: 'Jost',
+        fontFamily: 'Poppins',
         color: isDark ? Colors.white : Colors.black,
       ),
       decoration: InputDecoration(
         hintText: "Write Here",
         hintStyle: const TextStyle(
-          fontFamily: 'Jost',
+          fontFamily: 'Poppins',
           color: Colors.grey,
           fontWeight: FontWeight.w500,
         ),

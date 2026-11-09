@@ -52,7 +52,7 @@ class _MyOrderScreenState extends State<MyOrderScreen> {
         title: Text(
           "My Order",
           style: TextStyle(
-            fontFamily: 'Jost',
+            fontFamily: 'Poppins',
             color: isDark ? Colors.white : Colors.black,
             fontWeight: FontWeight.w500,
           ),
@@ -151,7 +151,7 @@ class _MyOrderScreenState extends State<MyOrderScreen> {
           child: Text(
             label,
             style: TextStyle(
-              fontFamily: 'Jost',
+              fontFamily: 'Poppins',
               fontSize: 14,
               fontWeight: FontWeight.w500,
               color: isActive
@@ -257,7 +257,7 @@ class OrderList extends StatelessWidget {
                   Text(
                     item['name']!,
                     style: TextStyle(
-                      fontFamily: 'Jost',
+                      fontFamily: 'Poppins',
                       fontWeight: FontWeight.w500,
                       fontSize: 15,
                       color: isDark ? Colors.white : Colors.black,

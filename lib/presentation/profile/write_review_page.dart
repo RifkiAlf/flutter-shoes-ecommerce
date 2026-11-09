@@ -53,7 +53,7 @@ class _WriteReviewPageState extends State<WriteReviewPage> {
           style: TextStyle(
             fontWeight: FontWeight.bold,
             color: isDark ? Colors.white : Colors.black,
-            fontFamily: 'Jost',
+            fontFamily: 'Poppins',
           ),
         ),
         centerTitle: true,
@@ -100,7 +100,7 @@ class _WriteReviewPageState extends State<WriteReviewPage> {
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 16,
-                            fontFamily: 'Jost',
+                            fontFamily: 'Poppins',
                             color: isDark ? Colors.white : Colors.black,
                           ),
                         ),
@@ -112,7 +112,7 @@ class _WriteReviewPageState extends State<WriteReviewPage> {
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 18,
-                                fontFamily: 'Jost',
+                                fontFamily: 'Poppins',
                                 color: isDark ? Colors.white : Colors.black,
                               ),
                             ),
@@ -123,7 +123,7 @@ class _WriteReviewPageState extends State<WriteReviewPage> {
                                 color: Colors.green.shade600,
                                 fontWeight: FontWeight.w500,
                                 fontSize: 12,
-                                fontFamily: 'Jost',
+                                fontFamily: 'Poppins',
                               ),
                             ),
                           ],
@@ -135,7 +135,7 @@ class _WriteReviewPageState extends State<WriteReviewPage> {
                             color: Colors.red,
                             fontWeight: FontWeight.w500,
                             fontSize: 14,
-                            fontFamily: 'Jost',
+                            fontFamily: 'Poppins',
                           ),
                         ),
                       ],
@@ -182,7 +182,7 @@ class _WriteReviewPageState extends State<WriteReviewPage> {
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
-                fontFamily: 'Jost',
+                fontFamily: 'Poppins',
                 color: isDark ? Colors.white : Colors.black,
               ),
             ),
@@ -192,7 +192,7 @@ class _WriteReviewPageState extends State<WriteReviewPage> {
               style: const TextStyle(
                 color: Colors.grey,
                 fontSize: 15,
-                fontFamily: 'Jost',
+                fontFamily: 'Poppins',
               ),
             ),
             const SizedBox(height: 15),
@@ -235,7 +235,7 @@ class _WriteReviewPageState extends State<WriteReviewPage> {
                 style: TextStyle(
                   fontWeight: FontWeight.w500,
                   fontSize: 15,
-                  fontFamily: 'Jost',
+                  fontFamily: 'Poppins',
                   color: isDark ? Colors.white : Colors.black,
                 ),
               ),
@@ -283,7 +283,7 @@ class _WriteReviewPageState extends State<WriteReviewPage> {
                     color: isDark ? Colors.black : Colors.white,
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
-                    fontFamily: 'Jost',
+                    fontFamily: 'Poppins',
                   ),
                 ),
               ),
@@ -306,7 +306,7 @@ class _WriteReviewPageState extends State<WriteReviewPage> {
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 15,
-            fontFamily: 'Jost',
+            fontFamily: 'Poppins',
             color: isDark ? Colors.white : Colors.black,
           ),
         ),
@@ -367,7 +367,7 @@ class _WriteReviewPageState extends State<WriteReviewPage> {
           label,
           style: TextStyle(
             fontSize: 16,
-            fontFamily: 'Jost',
+            fontFamily: 'Poppins',
             color: isDark ? Colors.white : Colors.black,
           ),
         ),

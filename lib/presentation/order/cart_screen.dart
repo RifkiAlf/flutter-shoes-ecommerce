@@ -93,15 +93,17 @@ class _CartScreenState extends State<CartScreen> {
             ),
             child: IconButton(
               onPressed: () {
-                // Menggunakan pushAndRemoveUntil memastikan kita kembali ke Home
-                // dan menghapus semua tumpukan halaman sebelumnya (termasuk login)
-                Navigator.pushAndRemoveUntil(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const MainScreen(initialIndex: 0),
-                  ),
-                  (route) => false,
-                );
+                if (Navigator.canPop(context)) {
+                  Navigator.pop(context);
+                } else {
+                  Navigator.pushAndRemoveUntil(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const MainScreen(initialIndex: 0),
+                    ),
+                    (route) => false,
+                  );
+                }
               },
               style: ButtonStyle(
                 overlayColor: WidgetStateProperty.all(Colors.transparent),
@@ -119,7 +121,7 @@ class _CartScreenState extends State<CartScreen> {
         title: Text(
           "My Cart",
           style: TextStyle(
-            fontFamily: 'Jost',
+            fontFamily: 'Poppins',
             // ✅ ini
             color: isDark ? Colors.white : Colors.black,
             fontWeight: FontWeight.w500,
@@ -167,7 +169,7 @@ class _CartScreenState extends State<CartScreen> {
                 RichText(
                   text: TextSpan(
                     style: TextStyle(
-                      fontFamily: 'Jost',
+                      fontFamily: 'Poppins',
                       // ✅ ini
                       color: isDark ? Colors.white : Colors.black,
                       fontSize: 20,
@@ -194,7 +196,7 @@ class _CartScreenState extends State<CartScreen> {
                     Text(
                       "Your order is eligible for free Delivery",
                       style: TextStyle(
-                        fontFamily: 'Jost',
+                        fontFamily: 'Poppins',
                         color: Colors.green,
                         fontSize: 15,
                         fontWeight: FontWeight.w500,
@@ -265,7 +267,7 @@ class _CartScreenState extends State<CartScreen> {
                 child: Text(
                   "Proceed to Buy (${cartItems.length} Items)",
                   style: TextStyle(
-                    fontFamily: 'Jost',
+                    fontFamily: 'Poppins',
                     // ✅ ini
                     color: isDark ? Colors.black : Colors.white,
                     fontSize: 16,

@@ -90,7 +90,7 @@ class NewPasswordScreen extends StatelessWidget {
                           style: TextStyle(
                             fontSize: 28,
                             fontWeight: FontWeight.w500,
-                            fontFamily: 'Jost',
+                            fontFamily: 'Poppins',
                           ),
                         ),
                         const SizedBox(height: 8),
@@ -99,7 +99,7 @@ class NewPasswordScreen extends StatelessWidget {
                           style: TextStyle(
                             fontSize: 14,
                             color: Colors.black54,
-                            fontFamily: 'Jost',
+                            fontFamily: 'Poppins',
                           ),
                         ),
                         const SizedBox(height: 35),
@@ -149,7 +149,7 @@ class NewPasswordScreen extends StatelessWidget {
                                 color: Colors.white,
                                 fontSize: 18,
                                 fontWeight: FontWeight.w400,
-                                fontFamily: 'Jost',
+                                fontFamily: 'Poppins',
                               ),
                             ),
                           ),
@@ -170,7 +170,7 @@ class NewPasswordScreen extends StatelessWidget {
                             text: const TextSpan(
                               style: TextStyle(
                                 color: Colors.black,
-                                fontFamily: 'Jost',
+                                fontFamily: 'Poppins',
                                 fontSize: 14,
                               ),
                               children: [

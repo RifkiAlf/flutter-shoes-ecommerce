@@ -41,7 +41,7 @@ class LanguageModal {
                     style: TextStyle(
                       fontSize: 18, 
                       fontWeight: FontWeight.bold,
-                      fontFamily: 'Jost',
+                      fontFamily: 'Poppins',
                       color: onSurface,
                     ),
                   ),
@@ -87,7 +87,7 @@ class LanguageModal {
         style: TextStyle(
           fontSize: 16, 
           fontWeight: FontWeight.w500,
-          fontFamily: 'Jost',
+          fontFamily: 'Poppins',
           color: onSurface,
         ),
       ),

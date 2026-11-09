@@ -50,7 +50,7 @@ class WelcomeScreen extends StatelessWidget {
                           .black, // Jika background gelap, ganti ke Colors.white
                       fontSize: 32,
                       fontWeight: FontWeight.w300, // Light/Thin
-                      fontFamily: 'Jost',
+                      fontFamily: 'Poppins',
                       height: 1.1,
                     ),
                   ),
@@ -62,7 +62,7 @@ class WelcomeScreen extends StatelessWidget {
                           .black, // Jika background gelap, ganti ke Colors.white
                       fontSize: 32,
                       fontWeight: FontWeight.w900, // Extra Bold/Black
-                      fontFamily: 'Jost',
+                      fontFamily: 'Poppins',
                     ),
                   ),
 
@@ -95,7 +95,7 @@ class WelcomeScreen extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w500,
-                          fontFamily: 'Jost',
+                          fontFamily: 'Poppins',
                         ),
                       ),
                     ),

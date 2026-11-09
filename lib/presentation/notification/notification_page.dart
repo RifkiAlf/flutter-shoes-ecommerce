@@ -42,7 +42,7 @@ class NotificationPage extends StatelessWidget {
         ),
         title: Text(
           'Notification (12)',
-          style: TextStyle(fontFamily: 'Jost', fontWeight: FontWeight.bold, fontSize: 18, color: iconColor),
+          style: TextStyle(fontFamily: 'Poppins', fontWeight: FontWeight.bold, fontSize: 18, color: iconColor),
         ),
         centerTitle: true,
         actions: [
@@ -113,7 +113,7 @@ class NotificationPage extends StatelessWidget {
                       Text(
                         notif['title']!, 
                         style: TextStyle(
-                          fontFamily: 'Jost', // Font judul
+                          fontFamily: 'Poppins', // Font judul
                           fontWeight: FontWeight.w600, 
                           fontSize: 15,
                           color: iconColor

@@ -106,7 +106,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       style: TextStyle(
                         fontSize: 28,
                         fontWeight: FontWeight.w500,
-                        fontFamily: 'Jost',
+                        fontFamily: 'Poppins',
                       ),
                     ),
                     const SizedBox(height: 5),
@@ -115,7 +115,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       style: TextStyle(
                         fontSize: 14,
                         color: Colors.black54,
-                        fontFamily: 'Jost',
+                        fontFamily: 'Poppins',
                       ),
                     ),
                     const SizedBox(height: 30),
@@ -155,7 +155,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           style: TextStyle(
                             color: Colors.black,
                             decoration: TextDecoration.underline,
-                            fontFamily: 'Jost',
+                            fontFamily: 'Poppins',
                           ),
                         ),
                       ),
@@ -170,11 +170,12 @@ class _LoginScreenState extends State<LoginScreen> {
                         height: 55,
                         child: ElevatedButton(
                           onPressed: () {
-                            Navigator.pushReplacement(
+                            Navigator.pushAndRemoveUntil(
                               context,
                               MaterialPageRoute(
                                 builder: (context) => const MainScreen(),
-                              ), // Panggil Wrapper-nya
+                              ),
+                              (route) => false,
                             );
                           },
                           style: ElevatedButton.styleFrom(
@@ -189,7 +190,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               color: Colors.white,
                               fontSize: 16,
                               fontWeight: FontWeight.w400,
-                              fontFamily: 'Jost',
+                              fontFamily: 'Poppins',
                             ),
                           ),
                         ),
@@ -208,7 +209,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           "Not a member? ",
                           style: TextStyle(
                             color: Colors.black54,
-                            fontFamily: 'Jost',
+                            fontFamily: 'Poppins',
                           ),
                         ),
                         GestureDetector(
@@ -225,7 +226,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               decoration: TextDecoration.underline,
-                              fontFamily: 'Jost',
+                              fontFamily: 'Poppins',
                             ),
                           ),
                         ),
@@ -262,7 +263,7 @@ class _LoginScreenState extends State<LoginScreen> {
           text,
           style: TextStyle(
             fontSize: 100,
-            fontFamily: 'Jost',
+            fontFamily: 'Poppins',
             fontWeight: FontWeight.w900,
             color: const Color(0xFFDFD7CA).withOpacity(0.4),
             letterSpacing: -5,
@@ -303,12 +304,12 @@ class _LoginScreenState extends State<LoginScreen> {
                 labelStyle: const TextStyle(
                   fontSize: 12,
                   color: Colors.grey,
-                  fontFamily: 'Jost',
+                  fontFamily: 'Poppins',
                 ),
                 hintStyle: const TextStyle(
                   fontSize: 14,
                   color: Colors.grey,
-                  fontFamily: 'Jost',
+                  fontFamily: 'Poppins',
                 ),
               ),
             ),
@@ -331,7 +332,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 style: TextStyle(
                   color: Colors.black54,
                   fontSize: 12,
-                  fontFamily: 'Jost',
+                  fontFamily: 'Poppins',
                 ),
               ),
             ),
@@ -382,7 +383,7 @@ class _LoginScreenState extends State<LoginScreen> {
               label,
               style: const TextStyle(
                 fontWeight: FontWeight.bold,
-                fontFamily: 'Jost',
+                fontFamily: 'Poppins',
               ),
             ),
           ],

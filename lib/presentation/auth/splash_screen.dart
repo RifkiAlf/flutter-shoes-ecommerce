@@ -173,7 +173,7 @@ class _SplashScreenState extends State<SplashScreen>
                         style: TextStyle(
                           fontSize: 40,
                           letterSpacing: 3,
-                          fontFamily: 'Jost',
+                          fontFamily: 'Poppins',
                           color: Colors.white,
                         ),
                         children: [
@@ -207,7 +207,7 @@ class _SplashScreenState extends State<SplashScreen>
                     color: Colors.white38,
                     fontSize: 12,
                     letterSpacing: 2,
-                    fontFamily: 'Jost',
+                    fontFamily: 'Poppins',
                   ),
                 ),
               ),

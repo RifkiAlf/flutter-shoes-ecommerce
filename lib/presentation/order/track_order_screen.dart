@@ -21,7 +21,7 @@ class TrackOrderScreen extends StatelessWidget {
         title: Text(
           "Track Order",
           style: TextStyle(
-            fontFamily: 'Jost',
+            fontFamily: 'Poppins',
             color: isDark ? Colors.white : Colors.black,
             fontWeight: FontWeight.w500,
           ),
@@ -47,7 +47,7 @@ class TrackOrderScreen extends StatelessWidget {
             Text(
               "Track order",
               style: TextStyle(
-                fontFamily: 'Jost',
+                fontFamily: 'Poppins',
                 fontSize: 18,
                 fontWeight: FontWeight.w600,
                 color: isDark ? Colors.white : Colors.black,
@@ -182,7 +182,7 @@ class TrackOrderScreen extends StatelessWidget {
                 Text(
                   item['name']!,
                   style: TextStyle(
-                    fontFamily: 'Jost',
+                    fontFamily: 'Poppins',
                     fontWeight: FontWeight.w500,
                     fontSize: 15,
                     color: isDark ? Colors.white : Colors.black,
@@ -305,7 +305,7 @@ class TrackOrderScreen extends StatelessWidget {
                   Text(
                     title,
                     style: TextStyle(
-                      fontFamily: 'Jost',
+                      fontFamily: 'Poppins',
                       fontWeight: FontWeight.bold,
                       color: isDone
                           ? const Color(0xFFB3261E)

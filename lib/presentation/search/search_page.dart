@@ -126,11 +126,12 @@ class _SearchPageState extends State<SearchPage> {
                 selectedCategory = index;
               });
 
-              Navigator.pushReplacement(
+              Navigator.pushAndRemoveUntil(
                 context,
                 MaterialPageRoute(
                   builder: (_) => const MainScreen(initialIndex: 3),
                 ),
+                (route) => false,
               );
             },
           );
